@@ -6,6 +6,6 @@ jobs:
     name: complexity analysis
     steps:
     - uses: actions/checkout@v2
-    - uses: seipan/logfind@v1
+    - uses: seipan/logfind@v1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
