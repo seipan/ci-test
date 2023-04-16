@@ -3,9 +3,11 @@ on: pull_request
 jobs:
   reviewdog:
     runs-on: ubuntu-latest
-    name: complexity analysis
+    name: logfind
     steps:
     - uses: actions/checkout@v2
     - uses: seipan/logfind@v1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        cycloover: 5
+        maintunder: 30
