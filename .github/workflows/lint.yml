@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: logfind
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@master
     - uses: seipan/logfind@v1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
