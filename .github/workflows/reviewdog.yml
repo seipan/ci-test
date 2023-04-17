@@ -3,11 +3,11 @@ on: pull_request
 jobs:
   complexity:
     runs-on: ubuntu-latest
-    name: complexity reviewdog
+    name: logfind reviewdog
     steps:
     - uses: actions/checkout@v2
     - name: logfind
       uses: ./
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        workdir: testdata/
+        workdir: /
