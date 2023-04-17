@@ -1,5 +1,5 @@
 name: 'Check log with reviewdog'
-description: 'Measure and report complexities of golang functions with reviewdog'
+description: 'Find log method of golang functions with reviewdog'
 author: 'seipan'
 inputs:
   github_token:
