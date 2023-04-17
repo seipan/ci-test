@@ -6,7 +6,7 @@ jobs:
     name: complexity reviewdog
     steps:
     - uses: actions/checkout@v2
-    - name: complexity
+    - name: logfind
       uses: ./
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
