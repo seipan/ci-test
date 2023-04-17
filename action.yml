@@ -14,7 +14,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: go get github.com/seipan/logfind/cmd/logfind@v1.1
+    - run: go get github.com/seipan/logfind/cmd/logfind
       shell: bash
     - run: ${{ github.action_path }}/install.sh
       shell: bash
