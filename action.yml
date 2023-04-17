@@ -6,14 +6,6 @@ inputs:
     description: 'GITHUB_TOKEN'
     required: true
     default: ${{ github.token }}
-  cycloover:
-    description: 'show functions with the Cyclomatic complexity > N (default: 10)'
-    required: false
-    default: 10
-  maintunder:
-    description: 'show functions with the Maintainability index < N (default: 20)'
-    required: false
-    default: 20
   workdir:
     description: 'working directory relative to the root directory'
     required: false
@@ -22,14 +14,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: go get github.com/seipan/logfind/cmd/logfind
+    - run: go get github.com/seipan/logfind/cmd/logfind@v1.1
       shell: bash
     - run: ${{ github.action_path }}/install.sh
       shell: bash
     - run: ${{ github.action_path }}/reviewdog.sh
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
-        INPUT_CYCLOOVER: ${{ inputs.cycloover }}
-        INPUT_MAINTUNDER: ${{ inputs.maintunder }}
         INPUT_WORKDIR: ${{ inputs.workdir }}
       shell: bash
