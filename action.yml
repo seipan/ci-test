@@ -1,6 +1,6 @@
-name: 'Check go func complexities with reviewdog'
+name: 'Check log with reviewdog'
 description: 'Measure and report complexities of golang functions with reviewdog'
-author: 'shoooooman'
+author: 'seipan'
 inputs:
   github_token:
     description: 'GITHUB_TOKEN'
@@ -22,7 +22,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: go get github.com/shoooooman/go-complexity-analysis/cmd/complexity
+    - run: go get github.com/seipan/logfind/cmd/logfind
       shell: bash
     - run: ${{ github.action_path }}/install.sh
       shell: bash
