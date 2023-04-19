@@ -22,6 +22,7 @@ runs:
         mkdir -p $HOME/bin && curl -sfL $INSTALL_SHELL| sh -s -- -b $HOME/bin
         echo ::add-path::$HOME/bin
         echo ::add-path::$(go env GOPATH)/bin # for Go projects
+      shell: bash
     - run: ${{ github.action_path }}/reviewdog.sh
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
