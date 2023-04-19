@@ -16,7 +16,8 @@ runs:
   steps:
     - run: go get github.com/seipan/logfind/cmd/logfind
       shell: bash
-    - run:|
+    - name: Setup reviewdog
+      run: |
         INSTALL_SHELL=https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh
         mkdir -p $HOME/bin && curl -sfL $INSTALL_SHELL| sh -s -- -b $HOME/bin
         echo ::add-path::$HOME/bin
