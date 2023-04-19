@@ -14,7 +14,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: go get github.com/seipan/logfind/cmd/logfind@latest
+    - run: go get github.com/seipan/logdel/cmd/logdel
       shell: bash
     - name: Setup reviewdog
       run: |
