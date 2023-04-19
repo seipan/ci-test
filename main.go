@@ -6,4 +6,5 @@ func main() {
 	log.Println("d") // nocheck:thislog
 	log.Println("d") // nocheck:thislog
 	log.Println("d") // nocheck:thislog
+	log.Println("d")
 }
