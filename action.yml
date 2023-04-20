@@ -16,7 +16,7 @@ runs:
   steps:
     - run: go get github.com/seipan/logfind/cmd/logfind
       shell: bash
-     - run: go install github.com/seipan/logfind/cmd/logfind
+    - run: go install github.com/seipan/logfind/cmd/logfind
       shell: bash
     - name: Setup reviewdog
       run: |
