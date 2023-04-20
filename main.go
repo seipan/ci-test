@@ -1,5 +1,8 @@
 package main
 
-func main() {
+import "log"
 
+func main() {
+	log.Println("dd")
+	log.Println("ff")
 }
