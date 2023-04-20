@@ -14,6 +14,6 @@ echo "$REVIEWDOG_YML" > .reviewdog_complexity.yml
 
 export REVIEWDOG_GITHUB_API_TOKEN="$INPUT_GITHUB_TOKEN"
 
-echo "::group:: reviewdog: go vet -vettool=\$(which logdel) ./..."
+echo "::group:: reviewdog: go vet -vettool=\$(which logfind) ./..."
 reviewdog -conf=./.reviewdog_complexity.yml -reporter=github-pr-check -level=info -filter-mode=file
 echo '::endgroup::'
